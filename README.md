@@ -1,68 +1,47 @@
-<div align="center">
+# Dos APIs HTTP con Express y Flask
 
-# ☁️ Cloud Infrastructure Automation Scripts in Python (Seminario 1)
+Ejercicio con dos implementaciones de API: Node.js/Express en el puerto 3000 y Python/Flask en el puerto 4000. Ambas exponen un estado y un JSON de identificación.
 
-**Scripts de automatización y aprovisionamiento de infraestructura en la nube utilizando Python y APIs REST.**
+## Requisitos
 
-[![Language](https://img.shields.io/badge/Language-Python-blue?style=for-the-badge)](https://github.com/Ennero/SEMINARIO1_HT1)
-[![Course](https://img.shields.io/badge/Course-Seminario%20de%20Sistemas%201-003366?style=for-the-badge)](https://ingenieria.usac.edu.gt/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+Node.js/npm y Python 3. Instalar dependencias de cada implementación.
 
-</div>
+## Ejecución
 
----
+Los comandos parten de la raíz del repositorio, salvo donde se indica otra terminal.
 
+```bash
+cd api1-node
+npm ci
+node index.js
 
-## 📌 Descripción General
-
-Este repositorio contiene la implementación y entrega de **☁️ Cloud Infrastructure Automation Scripts in Python (Seminario 1)**, desarrollado en el curso de **Seminario de Sistemas 1** en la Universidad de San Carlos de Guatemala.
-
-- **Objetivo:** Scripts de automatización y aprovisionamiento de infraestructura en la nube utilizando Python y APIs REST.
-- **Stack Principal:** `Python`.
-- **Área:** Ciencias de la Computación, Algoritmos y Desarrollo de Software.
-
----
-
-## 🚀 Características y Componentes
-
-- Implementación modular y buenas prácticas de codificación.
-- Manejo estructurado de datos, control de flujo y validaciones.
-- Documentación y scripts de soporte para compilación o ejecución.
-
----
-
-## 📦 Estructura del Proyecto
-
-```
-SEMINARIO1_HT1/
-├── src/ o archivos de código fuente
-├── docs/ (si aplica)
-├── .gitignore
-├── LICENSE
-└── README.md
+# Otra terminal, desde la raíz:
+python -m pip install -r api2-python/requirements.txt
+python api2-python/app.py
 ```
 
----
+## Recorrido de demostración
 
-## ⚙️ Requisitos y Ejecución
+Consultar GET http://127.0.0.1:3000/check y GET http://127.0.0.1:4000/check: deben responder OK. Consultar / en ambos puertos para comparar los JSON de instancia/curso/estudiante.
 
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/Ennero/SEMINARIO1_HT1.git
-   cd SEMINARIO1_HT1
-   ```
-2. Ejecutar según el entorno (`Python`):
-   - Consultar los scripts o archivos principales del proyecto para parámetros específicos.
+## Organización
 
----
+Carpetas de la entrega: [`api1-node/`](api1-node/), [`api2-python/`](api2-python/).
 
-## 📄 Licencia
+## Alcance y límites
 
-Este proyecto está bajo la Licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Es una demostración de servicios HTTP. No contiene un aprovisionador de infraestructura cloud ni una suite funcional automatizada.
 
----
+La documentación anterior a la actualización se conserva en [README-anterior.md](README-anterior.md) como referencia histórica; para iniciar el proyecto, seguir esta guía.
 
-## 👨‍💻 Autor
+## Contexto y licencia
 
-- **Enner Mendizabal** - [@Ennero](https://github.com/Ennero)  
-- *Facultad de Ingeniería, Universidad de San Carlos de Guatemala.*
+Trabajo académico o de aprendizaje conservado en el portafolio de [Enner Mendizabal](https://github.com/Ennero). Los créditos de los trabajos en grupo se conservan en sus entregas y manuales.
+
+Consultar [LICENSE](LICENSE) para la licencia de la raíz. Las dependencias y los componentes con avisos o licencias propios conservan sus condiciones.
+
+### Licencias declaradas por componente
+
+La licencia de la raíz no sustituye las declaraciones de estos manifiestos:
+
+- `api1-node/package.json`: `ISC`.
